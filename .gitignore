@@ -1,0 +1,90 @@
+# Виртуальное окружение
+.venv
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+
+# Логи
+*.log
+logs/
+
+# Данные (если не нужно коммитить)
+# data/*.json
+# data/*.csv
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Переменные окружения
+.env
+.env.local
+.env.*.local
+
+# Базы данных
+*.db
+*.sqlite
+*.sqlite3
+*.db3
+
+# Отчеты и тесты
+reports/
+temp_reports/
+.coverage
+.coverage.*
+.pytest_cache/
+# coverage.json и COVERAGE.md оставляем для отслеживания покрытия
+.tox/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Markdown файлы (не коммитить по умолчанию)
+*.md
+# Исключения для важных markdown файлов
+!README.md
+!COMMIT_RULES.md
+
+# Временные файлы
+*.tmp
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Git (отдельный репозиторий)
+.git_local/
+
+# Шаблоны коммитов
+.git_commit_template
+# COMMIT_RULES.md - оставляем в репозитории для справки
+
+# Пустые папки (можно добавить .gitkeep если нужно)
+# static/css/.gitkeep
+# static/js/.gitkeep
+# static/images/.gitkeep
+# templates/.gitkeep
