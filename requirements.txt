@@ -1,3 +1,4 @@
+# Сгенерировано: poetry run pip freeze (2026-02-24)
 asgiref==3.11.0
 astroid==4.0.3
 asttokens==3.0.1
