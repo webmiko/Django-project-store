@@ -22,13 +22,17 @@ load_dotenv(BASE_DIR / ".env")
 # Настройки для разработки; для production см. чеклист развёртывания:
 # https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
-# В production храните SECRET_KEY в секрете!
-SECRET_KEY = os.getenv(
-    "SECRET_KEY", "django-insecure-7ilky@rhdsel2-j1y8$8^n!__$2#7#k@eq(oj%ec62#vtu7opj"
-)
-
 # В production отключайте DEBUG!
 DEBUG = os.getenv("DEBUG", "True").lower() == "true"
+
+# Секретный ключ: из окружения; без него в production — ошибка.
+# Для локальной разработки без .env подставляется явно небезопасный ключ.
+SECRET_KEY = os.getenv("SECRET_KEY")
+if not SECRET_KEY:
+    if DEBUG:
+        SECRET_KEY = "django-insecure-dev-only-change-in-production"
+    else:
+        raise RuntimeError("Задайте SECRET_KEY в переменных окружения (например в .env)")
 
 
 def _parse_allowed_hosts(value: str) -> list[str]:
