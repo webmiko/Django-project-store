@@ -59,6 +59,7 @@ dmypy.json
 # Исключения для важных markdown файлов
 !README.md
 !COMMIT_RULES.md
+!ПЛАН-ПРОЕКТА.md
 
 # Временные файлы
 *.tmp
